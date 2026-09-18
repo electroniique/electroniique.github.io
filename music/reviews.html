@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Music Reviews — Equidist Neon</title><link rel="stylesheet" href="../css/style.css"></head>
+<body><header><h1><a href="../">Equidist Neon</a></h1><nav><a href="./">Ratings</a><a href="reviews.html">Reviews</a><a href="projects.html">Projects</a><a href="../">Home</a><a href="../links/">링크</a></nav></header>
+<main><h2>Music / Reviews</h2><p class="muted">Selected notes and reviews.</p><div id="reviews" class="reviews"></div></main>
+<script>
+const reviews = [
+{artist:'Albert Ayler Trio',title:'Spiritual Unity',year:1965,rating:8,text:`the most multi-dimensional shape of jazz to come`},
+{artist:'Company Flow / Cannibal Ox',title:'DPA (As Seen on T.V.) / Iron Galaxy',year:2001,rating:8,text:`I once saw this single vinyl at the local record store, gave up since I could barely afford it; went back home and took a listen on YT, happened to be two of the greatest songs respectively for both CoFlow and CanOx (already taken a shot to both CanOx songs in The Cold Vein). Should've saved my money back then.`},
+{artist:'DJ Shadow',title:'Midnight in a Perfect World',year:1996,rating:null,text:`if i had a future son and he didn't play this at my funeral i will wake up from my coffin immediately and this funeral will be dedicated to my son's death`},
+{artist:'GOD',title:'We Are Going to Make Love for a Thousand Years',year:2005,rating:8,text:`just like my heart pulsating when I eventually encounter my kindred spirit. that's my definitive love song in an ultimate form :)`},
+{artist:'Roland Kayn',title:'A Little Electronic Milky Way of Sound',year:2017,rating:9,text:`"Cybernetic Music" at its end on a highest note
+
+The late masterpiece Roland Kayn composed during his lifetime (and known to be originally assembled in 2009), but never to be properly released; belatedly rediscovered posthumously through Jim O'Rourke's audio restoration, with distribution by Frozen Reeds in the configuration of 16CD box sets in 2017.
+
+Reminiscent of his 70's works and the late-life work on modular synthesizers and tape machines, the sound resonates as if he had bestowed his breath into the album. 14 hours is never overlong for this "Milky Way of sound" in which the spatial-stirring sound organizes its own auditory structure, since it's more of an experience of sound texture than an actual album.
+
+I'm utterly speechless, such an astonishing work. Words cannot express the beauty of these space-warping sounds.
+
+One of the best experiences I had in my whole entire life.`},
+{artist:'Henri Pousseur',title:'Paysages planétaires',year:2004,rating:10,text:`The Planetary Landscapes
+
+Hell, what is even the objective definition of "music"? I dunno, it depends.
+
+Speaking of the rawest definition, do you perceive how the entire world could be compressed into a system of massive cubist electroacoustic exploration? Henri Pousseur surely did.
+
+Beyond music itself lie supermontages of deconstruction and reimagination of the world.
+
+Less an album than a planetary-scale reorganization of sonic reality, this is what the world sounds like.
+
+This is my subjective definition of music.`},
+{artist:'Pierre Schaeffer',title:`L'œuvre musicale`,year:1990,rating:8,text:`all hail the pioneer!`},
+{artist:'Staatsoper Stuttgart / Lothar Zagrosek',title:'Das Mädchen mit den Schwefelhölzern',year:2002,rating:9,text:`amazing instrumentation and surreal timbre, every element just falls right into the magnum opus like sophisticated puzzle pieces.
+
+so why is this listed under Feldman in spotify?`},
+{artist:'山下洋輔トリオ、 大駱駝艦、 ジェラルド大下',title:'嵐 [Arashi]',year:1977,rating:7,text:`pro tip:
+1. Listen w/ headphones, volumes nearly maximized
+2. Close your eyes
+3-1. Feel the density of time
+3-2. Feel the translation of the perception
+3-3. Feel the force majeure unrepeatability of your life and the event
+
+don't think the sound, feel the sound`}
+];
+function stars(r){if(r==null||Number(r)===0)return '';let v=Math.max(0,Math.min(10,Number(r)));let full=Math.floor(v/2),half=(v%2)>=1;return '★'.repeat(full)+(half?'½':'')}
+function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+document.getElementById('reviews').innerHTML=reviews.map(x=>`<article class="review"><div class="review-head"><div><h3>${esc(x.artist)} — <em>${esc(x.title)}</em></h3><div class="muted">${x.year}</div></div><div class="review-score">${stars(x.rating)}</div></div><div class="review-text">${esc(x.text)}</div></article>`).join('');
+</script></body></html>
