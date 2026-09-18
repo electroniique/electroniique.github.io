@@ -2,12 +2,168 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Equidist Neon</title>
-</head>
-<body>
-  <h1>Equidist Neon</h1>
 
-  <h2>음악</h2>
-  <h2>물리</h2>
+  <style>
+    body {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 24px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    h1 {
+      margin-bottom: 48px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 48px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav a {
+      padding: 12px 0;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid;
+    }
+
+    section {
+      margin-top: 48px;
+    }
+
+    .music-menu {
+      display: flex;
+      gap: 20px;
+      margin: 24px 0;
+    }
+
+    .music-menu a {
+      color: inherit;
+    }
+
+    .rating-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+    }
+
+    .rating-table th,
+    .rating-table td {
+      padding: 10px 8px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .rating {
+      width: 80px;
+      text-align: right !important;
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Equidist Neon</h1>
+
+    <nav>
+      <a href="#music">음악</a>
+      <a href="#film">영화</a>
+      <a href="#physics">물리</a>
+      <a href="#math">수학</a>
+      <a href="#philosophy">철학</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 음악 -->
+    <section id="music">
+      <h2>음악</h2>
+
+      <div class="music-menu">
+        <a href="#ratings">Ratings</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#projects">Projects</a>
+      </div>
+
+      <!-- 평점 기록 -->
+      <section id="ratings">
+        <h3>Ratings</h3>
+
+        <table class="rating-table">
+          <thead>
+            <tr>
+              <th>Artist</th>
+              <th>Release</th>
+              <th>Year</th>
+              <th class="rating">Rating</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Artist A</td>
+              <td>Album A</td>
+              <td>1997</td>
+              <td class="rating">8.7</td>
+            </tr>
+
+            <tr>
+              <td>Artist B</td>
+              <td>Album B</td>
+              <td>2004</td>
+              <td class="rating">7.4</td>
+            </tr>
+
+            <!-- 평점 0 = 공란 -->
+            <tr>
+              <td>Artist C</td>
+              <td>Album C</td>
+              <td>2025</td>
+              <td class="rating"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="reviews">
+        <h3>Reviews</h3>
+      </section>
+
+      <section id="projects">
+        <h3>Projects</h3>
+      </section>
+
+    </section>
+
+    <!-- 다른 분야 -->
+    <section id="film">
+      <h2>영화</h2>
+    </section>
+
+    <section id="physics">
+      <h2>물리</h2>
+    </section>
+
+    <section id="math">
+      <h2>수학</h2>
+    </section>
+
+    <section id="philosophy">
+      <h2>철학</h2>
+    </section>
+
+  </main>
+
 </body>
 </html>
