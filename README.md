@@ -1,3 +1,3 @@
-# Equidist Neon /// Ploique Cyx — v13.1
+# Equidist Neon /// Ploique Cyx — v13.2
 
-Responsive navigation/favorites update and refreshed music export.
+Unified #F4F4ED navigation/tab palette and cross-page navigation/mobile bug fixes.
