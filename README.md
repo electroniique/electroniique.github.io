@@ -1,21 +1,9 @@
-# Equidist Neon /// Ploique Cyx — Website
+# Equidist Neon /// Ploique Cyx
+Static GitHub Pages site. No build step.
 
-Static GitHub Pages-ready site.
+- Mondrian navigation is implemented as real HTML/CSS grid cells.
+- Physics red / Mathematics yellow / Music green / Film blue / Essay purple.
+- The right object is a CSS 3D cube built from six planes with perspective and continuous 3-axis rotation; no cube image is used.
+- Clicking the cube returns to Home.
 
-## Interaction
-- Mondrian navigation starts desaturated and reveals category color on hover/selection.
-- Physics → red cube accent
-- Mathematics → yellow cube accent
-- Music → green cube accent
-- Film → blue cube accent
-- Essay → purple cube accent
-- The right wireframe object continuously rotates in 3D; clicking it returns to Home.
-- `prefers-reduced-motion` disables continuous rotation.
-
-## GitHub Pages
-1. Upload the contents of this folder to the root of a GitHub repository.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, select **Deploy from a branch**.
-4. Select `main` and `/ (root)`, then Save.
-
-No build step or external libraries are required.
+Deploy by uploading the contents of this directory to a GitHub repository and enabling GitHub Pages for the branch/root.
